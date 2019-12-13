@@ -1,16 +1,23 @@
 {
-    "version": 2,
-    "name": "hazel",
-    "builds": [
-        {
-            "src": "lib/server.js",
-            "use": "@now/node"
-        }
-    ],
-    "routes": [
-        {
-            "src": ".*",
-            "dest": "/lib/server.js"
-        }
-    ]
+  "version": 2,
+  "name": "hazel",
+  "builds": [
+    {
+      "src": "lib/server.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": ".*",
+      "dest": "/lib/server.js"
+    }
+  ],
+  "build": {
+    "env": {
+      "ACCOUNT": "lomocc",
+      "REPOSITORY": "gxwork-release",
+      "PROXY": "true"
+    }
+  }
 }
