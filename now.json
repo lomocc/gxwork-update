@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "hazel",
+  "name": "gxwork-update",
   "builds": [
     {
       "src": "lib/server.js",
