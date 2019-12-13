@@ -13,11 +13,9 @@
       "dest": "/lib/server.js"
     }
   ],
-  "build": {
-    "env": {
-      "ACCOUNT": "lomocc",
-      "REPOSITORY": "gxwork-release",
-      "PROXY": "true"
-    }
+  "env": {
+    "ACCOUNT": "lomocc",
+    "REPOSITORY": "gxwork-release",
+    "PROXY": "true"
   }
 }
