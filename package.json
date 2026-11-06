@@ -1,0 +1,61 @@
+{
+  "name": "hazel",
+  "version": "1.1.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "micro",
+    "dev": "micro-dev",
+    "test": "xo",
+    "precommit": "lint-staged"
+  },
+  "license": "MIT",
+  "repository": "zeit/hazel",
+  "xo": {
+    "extends": [
+      "prettier"
+    ],
+    "rules": {
+      "camelcase": 0,
+      "new-cap": 0,
+      "unicorn/no-process-exit": 0,
+      "no-await-in-loop": 0
+    }
+  },
+  "now": {
+    "env": [
+      "ACCOUNT",
+      "REPOSITORY"
+    ],
+    "files": [
+      "lib",
+      "package-lock.json",
+      "package.json"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm test",
+      "prettier --single-quote --no-semi --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "express-useragent": "1.0.7",
+    "fetch": "1.1.0",
+    "finalhandler": "1.0.4",
+    "micro": "8.0.1",
+    "ms": "2.0.0",
+    "node-fetch": "1.7.1",
+    "router": "1.3.1",
+    "semver": "5.4.1",
+    "stream-to-string": "1.1.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "2.3.0",
+    "husky": "0.14.3",
+    "lint-staged": "4.0.2",
+    "micro-dev": "1.1.1",
+    "prettier": "1.5.3",
+    "xo": "0.18.2"
+  }
+}
