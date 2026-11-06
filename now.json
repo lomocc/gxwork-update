@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "name": "gxwork-update",
+  "builds": [
+    {
+      "src": "lib/server.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": ".*",
+      "dest": "/lib/server.js"
+    }
+  ],
+  "env": {
+    "ACCOUNT": "lomocc",
+    "REPOSITORY": "gxwork-release",
+    "PROXY": "true"
+  }
+}
